@@ -1,0 +1,37 @@
+body{
+	text-align: center;
+	font-family: sans-serif;
+	background-color: #ff6355;
+	color: #600b0b;
+	/*color: #51434a;*/
+	/*color: black;*/
+	/*color: white;*/
+}
+
+h1{
+
+	text-shadow: 0px 1px rgba(255,255,255, 0);
+}
+
+.icon{
+	/*background-image: url('iconwhite.png');*/
+	background-image: url('icon.png');
+	width: 136px;
+	height: 120px;
+	background-size: cover;
+	margin: 1.5em auto -1em auto;
+}
+
+.listinput{
+	border: none;
+	background-color: white;
+	border-radius: 1em;
+	padding: 0.5em 3em;
+	font-size: 1em;
+	text-align: center;	
+	z-index: 1;
+}
+
+.listinput:focus{
+	outline: 0;
+}
