@@ -1,23 +1,20 @@
-function removeListItem(){
-	$('.btn-remove').on('click', function(){
-		$(this).closest('.listitem').remove();
+function removeListItem(item){
+	$(item).find('.btn-remove').on('click', function(){
+		$(item).remove();
 	});
 };
 
-function toggleCheck(){
-	$('.listitem').on('click', function(){
-		$(this).toggleClass('checked');
-		$(this).find('.btn-check').toggleClass('fa fa-check');
+function toggleCheck(item){
+	$(item).on('click', function(){
+		console.log(item);
+		$(item).toggleClass('checked');
+		$(item).find('.btn-check').toggleClass('fa fa-check');
 	});
 
 };
 
 $(document).ready(function(){
 	//setting functionality
-	removeListItem();
-	toggleCheck();
-
-
 	$(".listinput").on('keypress', function(){
 		if(event.which == 13){
 			event.preventDefault();
@@ -27,11 +24,13 @@ $(document).ready(function(){
 				$(this).val('');
 			}else{
 				$(".list").prepend("<div class='listitem'><div class='btn-check'></div>" + item + "<div class='btn-remove fa fa-times'></div></div>");
+				var newitem = $(".list").find('div:first');
+				// console.log(newitem);
 				$(this).val('');
-				//setting functionality
-				removeListItem();
-				toggleCheck();
+				//// setting functionality
+				removeListItem(newitem);
+				toggleCheck(newitem);
 			};
 		};
-	});
+	});	
 });
