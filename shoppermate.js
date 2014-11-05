@@ -26,7 +26,7 @@ $(document).ready(function(){
 				console.log('please enter text');
 				$(this).val('');
 			}else{
-				$(".list").prepend("<div class='listitem'>" + item + "<div class='btn-remove fa fa-times'></div></div>");
+				$(".list").prepend("<div class='listitem'><div class='btn-check'></div>" + item + "<div class='btn-remove fa fa-times'></div></div>");
 				$(this).val('');
 				//setting functionality
 				removeListItem();
