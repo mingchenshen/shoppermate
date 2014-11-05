@@ -2,20 +2,30 @@ body{
 	text-align: center;
 	font-family: sans-serif;
 	background-color: #ff6355;
-	color: #600b0b;
+	color: #ff6355;
 	/*color: #51434a;*/
-	/*color: black;*/
+	/*color: #f7bc84;*/
 	/*color: white;*/
+	margin: 0 0;
+	padding: 0;
 }
 
 h1{
-
 	text-shadow: 0px 1px rgba(255,255,255, 0);
+	margin-bottom: 0.2em;
+}
+
+.banner{
+	background-color: #600b0b;
+	top: 0;
+	padding-top: 0.5em;
+	padding-bottom: 1px;
+	margin-bottom: 0.2em;
 }
 
 .icon{
 	/*background-image: url('iconwhite.png');*/
-	background-image: url('icon.png');
+	background-image: url('iconsalmon.png');
 	width: 136px;
 	height: 120px;
 	background-size: cover;
@@ -30,8 +40,39 @@ h1{
 	font-size: 1em;
 	text-align: center;	
 	z-index: 1;
+	margin: 0.5em auto;
 }
 
 .listinput:focus{
 	outline: 0;
+}
+
+.list{
+	max-width: 500px;
+	margin: 0 auto;
+	color: #ff6355;
+}
+
+.listitem{
+	font-size: 1em;
+	padding: 5px 3em;
+	margin: 3px;
+	background-color: white;
+	border-radius: 1em;
+	text-align: left;
+}
+
+.checked{
+	opacity: 0.5;
+}
+
+.btn-remove{
+	height: 24px;
+	width: 24px;
+	border-radius: 1em;
+	border: 2px solid #600b0b;
+	color: #600b0b;
+	float: right;
+	margin-top: -5px;
+	margin-right: -48px;
 }

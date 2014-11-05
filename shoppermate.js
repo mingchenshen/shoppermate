@@ -3,7 +3,8 @@ $(document).ready(function(){
 		if(event.which == 13){
 		event.preventDefault();
 		var item = $(this).val();
-		console.log(item);
+		// console.log(item);
+		$(".list").append("<div class='listitem'>" + item + "</div>");
 		$(this).val('');
 		};
 	});
