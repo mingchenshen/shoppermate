@@ -1,6 +1,8 @@
 function removeListItem(item){
 	$(item).find('.btn-remove').on('click', function(){
-		$(item).remove();
+		$(item).fadeOut(200, function(){
+			$(this).remove();
+		});
 	});
 };
 
@@ -10,7 +12,6 @@ function toggleCheck(item){
 		$(item).toggleClass('checked');
 		$(item).find('.btn-check').toggleClass('fa fa-check');
 	});
-
 };
 
 $(document).ready(function(){
@@ -25,12 +26,17 @@ $(document).ready(function(){
 			}else{
 				$(".list").prepend("<div class='listitem'><div class='btn-check'></div>" + item + "<div class='btn-remove fa fa-times'></div></div>");
 				var newitem = $(".list").find('div:first');
-				// console.log(newitem);
+				newitem.animate({marginTop:'+=1.5em', padding:'+=7px +=0'});
 				$(this).val('');
 				//// setting functionality
 				removeListItem(newitem);
 				toggleCheck(newitem);
 			};
 		};
-	});	
+	});
+	$('.clear').on('click', function(){
+		$('.listitem').fadeOut(200, function(){
+			$('this').remove();
+		});
+	});
 });
