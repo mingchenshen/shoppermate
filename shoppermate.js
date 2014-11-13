@@ -15,6 +15,8 @@ function toggleCheck(item){
 };
 
 $(document).ready(function(){
+	$(".list").sortable();
+
 	//setting functionality
 	$(".listinput").on('keypress', function(){
 		if(event.which == 13){
